@@ -1,11 +1,16 @@
-// Wrong Way
+/** Wrong Way
+const arr = ['foo', 'bar'];
+const copy = arr.sort();
+*/
+// Cannot mutate - cannot call sort
 var arr = ['foo', 'bar'];
-var copy = arr.sort();
+// Use slice to copy array before sort
+var copy = arr.slice().sort();
 console.log({ arr: arr });
 console.log({ copy: copy });
 /**
   * Output:
-  * { arr: [ 'bar', 'foo' ] }
+  * { arr: [ 'foo', 'bar' ] }
   * { copy: [ 'bar', 'foo' ] }
-  * Sort mutates the original array
+  * Original array unmutated
 */
