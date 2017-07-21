@@ -6,12 +6,7 @@ console.log(foo);
 
 const foo = [1, 3, 22];
 // Pass in comparer function
-foo.sort(function (a, b) {
-  // if a < b return -number
-  // if a === b return 0
-  // if a > b return number
-  return a - b;
-});
+foo.sort((a, b) => a - b);
 
 console.log(foo);
 
